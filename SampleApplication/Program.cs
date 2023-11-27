@@ -1,10 +1,10 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Protocols.OpenIdConnect;
 using SampleApplication.AFL;
-using Swashbuckle.AspNetCore.Swagger;
+
 using SampleApplication.AutoDCR_V_1;
 using SampleApplication.Service;
-using Microsoft.OpenApi.Models;
+
 using Microsoft.AspNetCore.Builder;
 
 var builder = WebApplication.CreateBuilder(args);
