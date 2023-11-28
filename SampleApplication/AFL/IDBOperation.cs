@@ -2,8 +2,12 @@
 
 namespace SampleApplication.AFL
 {
-    public interface IDBOperation
+    public interface IDBOperation<TEntity, in Tpk> where TEntity : class
     {
-        Task<bool> InsertAsync(CompanyDTO company);
+        Task<bool> InsertAsync(TEntity entity);
+
+        Task<IEnumerable<TEntity>> GetAllAsync();
+
+        Task<TEntity> GetAsync(Tpk id);
     }
 }

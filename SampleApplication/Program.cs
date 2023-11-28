@@ -17,7 +17,9 @@ builder.Services.AddDbContext<SampleContext>(options =>
 });
 
 builder.Services.AddControllersWithViews();
-builder.Services.AddScoped<IDBOperation, CompanyRepository>();
+
+//register Dependency
+builder.Services.AddScoped<IDBOperation<Company,int>, CompanyRepository>();
 
 var app = builder.Build();
 
